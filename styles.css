@@ -108,45 +108,56 @@ img {
 .guide {
     background-color: white;
     color: #1D3557;
-    padding: 5px;
+    padding: 25px 0; 
     border-radius: 0 0 10px 10px;
 }
 
-.guide-container {
+.guide-card {
+    width: 55%; 
+    margin: 0 auto;
+    padding: 20px;
     background-color: #A8DADC;
-    margin: 20px 100px;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border-radius: 10px 10px 0 0;
-}
-#blue-line {
-    border: 3px solid #1D3557;
-    margin: -20px 100px 20px 100px;
-    padding: 0;
+    align-items: center; 
+    border-radius: 10px;
+    border-bottom: 4px solid #1D3557; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
-.guide-desc-container {
-    padding: 0;
+.guide-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    margin-right: 20px;
+    object-fit: cover; 
+    border: 3px solid #F1FAEE; 
 }
 
-#avatar {
-    height: 150px;
-    width: 100px;
-    padding: 10px;
-    margin: 0;
-    border-radius: 15px;
+.guide-text {
+    text-align: left; 
+    font-size: 0.9rem; 
 }
 
-.p-guide {
+.guide-text h3 {
+    margin: 0 0 8px 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.guide-text p {
     font-style: italic;
-    font-size: 10px;
-    margin: 20px;
+    margin: 0 10px 12px 0;
+    line-height: 1.4;
+    font-size: .7em;
 }
 
-
+.guide-text h4 {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+}
 
 
 
