@@ -32,7 +32,7 @@ img {
     border-radius: 20px;
 }
 
-#hero {
+.hero {
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -42,7 +42,7 @@ img {
     border-radius: 10px 10px 0 0;
 }
 
-#hero-highlight {
+.hero h1 {
     color: #F1FAEE;
     padding: 6px 12px;
     margin: 70px auto 4px auto;
@@ -51,7 +51,7 @@ img {
     border-radius: 6px;
 }
 
-#hero-desc {
+.hero h2 {
     color: #F1FAEE;
     font-size: 0.8em;
     text-align: center;
@@ -67,12 +67,12 @@ img {
     padding: 25px 0;
 }
 
-.h3-activity {
+.activity h3 {
     font-size: 1em;
     font-weight: bold;
     font-family: 'Raleway', sans-serif;
-    margin: 5px auto 8px auto;
-    padding-bottom: 8px;
+    margin: 0 auto 10px auto;
+    padding-bottom: 2%;
     
 }
 
@@ -92,7 +92,7 @@ img {
     
 }
 
-.h4-activity {
+.activity-container h4 {
     font-size: 1em;
     font-weight: bold;
     font-family: 'Raleway', sans-serif;
@@ -100,9 +100,29 @@ img {
     padding: 2px 0;
 }
 
-.p-desc {
+.activity-container p {
     margin: 12px;
     padding: 0;
+}
+
+.activity-1:hover {
+    background-color: #A8DADC;
+    padding: 10px;
+    border-radius: 10px;
+    transform: scale(1.1);
+}
+
+.activity-2:hover {
+    background-color: #A8DADC;
+    padding: 10px;
+    border-radius: 10px;
+    transform: scale(1.1);
+
+}.activity-3:hover {
+    background-color: #A8DADC;
+    padding: 10px;
+    border-radius: 10px;
+    transform: scale(1.1);
 }
 
 .guide {
@@ -158,7 +178,4 @@ img {
     font-weight: 700;
     font-size: 1rem;
 }
-
-
-
 
