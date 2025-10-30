@@ -14,6 +14,7 @@ body {
     text-align: center;
     background-color: #dad7cd;
     font-family: 'Poppins', sans-serif;
+    color: #1D3557; 
 }
 
 h1, h2 {
@@ -23,13 +24,17 @@ h1, h2 {
 img {
     width: 100px;
     height: 100px;
+    display: block;
 }
 
 .container {
-    width: 520px;
+
+    width: 95%; 
+    max-width: 520px;
     margin: 20px auto;
     border: 10px solid whitesmoke;
     border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
 .hero {
@@ -37,15 +42,18 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center; /* Center content vertically */
     background-image: url("https://www.balisurfingcamp.com/wp-content/uploads/2023/07/image-62.jpeg");
     background-size: cover;
+    background-position: center; /* Center the background image */
     border-radius: 10px 10px 0 0;
+    padding: 20px 0; /* Add some padding for small screens */
 }
 
 .hero h1 {
     color: #F1FAEE;
     padding: 6px 12px;
-    margin: 70px auto 4px auto;
+    margin: 50px auto 4px auto; /* Adjusted top margin */
     font-size: 1.6rem;
     background-color: #457B9D;
     border-radius: 6px;
@@ -53,25 +61,26 @@ img {
 
 .hero h2 {
     color: #F1FAEE;
-    font-size: 0.8em;
+    font-size: 0.9rem; /* Increased font size slightly */
     text-align: center;
-    padding: 4px 5px;
-    margin: 5px 80px 50px 80px;
+    padding: 4px 8px; /* Slightly more padding */
+    margin: 5px 10% 50px 10%; /* Use percentage for responsive margins */
     background-color: #1D3557;
     border-radius: 6px;
+    max-width: 90%; /* Ensure it doesn't get too wide */
 }
 
 .activity {
     color: #1D3557;
     background-color: #F1FAEE;
-    padding: 25px 0;
+    padding: 25px 10px; /* Add horizontal padding */
 }
 
 .activity h3 {
-    font-size: 1em;
+    font-size: 1.2rem; /* Increased font size */
     font-weight: bold;
     font-family: 'Raleway', sans-serif;
-    margin: 0 auto 10px auto;
+    margin: 0 auto 20px auto; /* Increased bottom margin */
     padding-bottom: 2%;
     
 }
@@ -80,60 +89,71 @@ img {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
-    font-size: 0.6em;
+    align-items: flex-start; /* Align items to the top */
+    font-size: 0.9rem; /* Increased base font size */
     text-align: center;
+    flex-wrap: wrap; /* Allow wrapping if needed, though media query will handle it */
+}
+
+/* Target individual activity items for better spacing */
+.activity-1,
+.activity-2,
+.activity-3 {
+    width: 30%; /* Give a base width */
+    min-width: 150px; /* Prevent them from getting too small */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .activities-img {
-    width: 50px;
-    height: 50px;
-    border-radius: 25%;
+    width: 100px; /* Increased size for visibility */
+    height: 100px;
+    border-radius: 50%; /* Make it a circle */
+    object-fit: cover; /* Prevent image distortion */
+    border: 3px solid #A8DADC; /* Add a small border */
+    margin-bottom: 10px;
     
 }
 
 .activity-container h4 {
-    font-size: 1em;
+    font-size: 1.1rem; /* Increased font size */
     font-weight: bold;
     font-family: 'Raleway', sans-serif;
-    margin: 5px 15px 1px 15px;
+    margin: 5px 0 10px 0; /* Adjusted margins */
     padding: 2px 0;
 }
 
 .activity-container p {
-    margin: 12px;
+    margin: 0; /* Removed default margins */
     padding: 0;
+    line-height: 1.4;
 }
 
-.activity-1:hover {
+/* Combined hover rules for cleaner code */
+.activity-1:hover,
+.activity-2:hover,
+.activity-3:hover {
     background-color: #A8DADC;
     padding: 10px;
     border-radius: 10px;
-    transform: scale(1.1);
+    transform: scale(1.05); /* Slightly reduced scale for subtlety */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
 }
 
-.activity-2:hover {
-    background-color: #A8DADC;
-    padding: 10px;
-    border-radius: 10px;
-    transform: scale(1.1);
-
-}.activity-3:hover {
-    background-color: #A8DADC;
-    padding: 10px;
-    border-radius: 10px;
-    transform: scale(1.1);
-}
 
 .guide {
     background-color: white;
     color: #1D3557;
-    padding: 25px 0; 
+    padding: 25px 10px; /* Add horizontal padding */
     border-radius: 0 0 10px 10px;
 }
 
 .guide-card {
-    width: 55%; 
+    width: 90%; /* Make it wider */
+    max-width: 450px; /* Set a max-width */
     margin: 0 auto;
     padding: 20px;
     background-color: #A8DADC;
@@ -142,6 +162,7 @@ img {
     border-radius: 10px;
     border-bottom: 4px solid #1D3557; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
 }
 
 .guide-avatar {
@@ -151,6 +172,7 @@ img {
     margin-right: 20px;
     object-fit: cover; 
     border: 3px solid #F1FAEE; 
+    flex-shrink: 0; /* Prevent avatar from shrinking */
 }
 
 .guide-text {
@@ -169,7 +191,7 @@ img {
     font-style: italic;
     margin: 0 10px 12px 0;
     line-height: 1.4;
-    font-size: .7em;
+    font-size: 0.9rem; /* Increased font size */
 }
 
 .guide-text h4 {
@@ -179,3 +201,54 @@ img {
     font-size: 1rem;
 }
 
+
+/* --- RESPONSIVE STYLES --- */
+/* This media query applies to screens 600px wide or smaller */
+@media (max-width: 600px) {
+
+    .hero h1 {
+        font-size: 1.4rem;
+        margin-top: 20px;
+    }
+
+    .hero h2 {
+        font-size: 0.8rem;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .activity-container {
+        flex-direction: column; /* Stack activities vertically */
+        align-items: center; /* Center items in the column */
+    }
+
+    .activity-1,
+    .activity-2,
+    .activity-3 {
+        width: 90%; /* Allow items to take up more width */
+        margin-bottom: 25px; /* Add space between stacked items */
+    }
+    
+    .activity-3 {
+        margin-bottom: 0; /* Remove margin from the last item */
+    }
+
+    .guide-card {
+        flex-direction: column; /* Stack guide card content */
+        width: 90%; /* Use more of the screen width */
+        align-items: center; /* Center the content */
+    }
+
+    .guide-avatar {
+        margin-right: 0; /* Remove side margin */
+        margin-bottom: 20px; /* Add space below avatar */
+    }
+
+    .guide-text {
+        text-align: center; /* Center-align the text */
+    }
+    
+    .guide-text p {
+        margin-right: 0; /* Remove side margin */
+    }
+}
